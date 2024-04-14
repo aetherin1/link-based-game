@@ -32,6 +32,7 @@ class Location extends Scene {
     handleChoice(choice) {
         if(choice) {
             if (choice.Target=="Try again") {
+                inventory = new Set();
                 window.location.reload();
             }
             this.engine.show("&gt; "+choice.Text);
