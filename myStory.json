@@ -1,0 +1,169 @@
+{
+    "Title": "Camping with a side of BLOOD",
+    "Credits": "Initial files created by Adam Smith (amsmith@ucsc.edu). Story and implementation by Asher Etherington.",
+    "InitialLocation": "Campsite",
+    "Locations": {
+        "Campsite": {
+            "Body": "After reaching the campsite your girlfriend told you to pick her up at you see that she is no longer there. After closer inspection you see some tracks leading into the woods",
+            "Choices": [
+                {
+                    "Text": "Follow the tracks",
+                    "Target": "Woods"
+                }
+            ]
+        },
+        "Woods": {
+            "Body": "After following the racks through the woods for a little while you find what seems to be an abandoned gothic mansion.",
+            "Choices": [
+                {
+                    "Text": "Enter the mansion",
+                    "Target": "Entrance"
+                }
+            ]
+        },
+        "Entrance": {
+            "Body": "Once inside the cold dark house you see three doors leading to different rooms.",
+            "Choices": [
+                {
+                    "Text": "Enter the kitchen.",
+                    "Target": "Kitchen"
+                },
+                {
+                    "Text": "Enter the main room.",
+                    "Target": "Main",
+                    "Need": "garlic"
+                },
+                {
+                    "Text": "Enter the dungeon.",
+                    "Target": "Dungeon"
+                }
+            ]
+        },
+        "Kitchen": {
+            "Body": "You enter a cold kitchen splattered with blood. In the center of the kitchen is a table with a dead body on it. You also see a pantry in the corner of the room.",
+            "Choices": [
+                {
+                    "Text": "Check the pantry",
+                    "Target": "Pantry"
+                },
+                {
+                    "Text": "Go back to the entrance",
+                    "Target": "Entrance"
+                },
+                {
+                    "Text": "Examine the body.",
+                    "Target": "Body"
+                }
+            ]
+        },
+        "Body": {
+            "Body": "On the mans body you notice two small teeth marks on his neck with blood dripping from them. The man is also still holding onto a large kitchen knife.",
+            "Choices": [
+                {
+                    "Text": "Take knife and go back to the kitchen.",
+                    "Target": "Kitchen",
+                    "Pickup": "knife"
+                }
+            ]
+        },
+        "Pantry": {
+            "Body": "Inside the pantry you see many different ingredients including a large wad of garlic.",
+            "Choices": [
+                {
+                    "Text": "Grab garlic and return to kitchen.",
+                    "Target": "Kitchen",
+                    "Pickup": "garlic"
+                }
+            ]
+        },
+        "Dungeon": {
+            "Body": "You enter a dungeon lined with with small cells. In one cell you see an unconscious man with what looks like a key attatched to his belt.",
+            "Choices": [
+                {
+                    "Text": "Enter the cell with the man in it.",
+                    "Target": "Cell"
+                },
+                {
+                    "Text": "Go back to the entrance.",
+                    "Target": "Entrance"
+                },
+                {
+                    "Text": "Exit the dungeon into the main room",
+                    "Target": "Main",
+                    "Need": "gralic"
+                }
+            ]
+        },
+        "Cell": {
+            "Body": "Once inside the cell the man springs to life and lunges at you.",
+            "Choices": [
+                {
+                    "Text": "Fight back.",
+                    "Target": "Stabbed",
+                    "Need": "knife"
+                }
+            ]
+        },
+        "Stabbed": {
+            "Body": "You were able to fight the man off with the knife but unfortunately you had to kill the man in the process.",
+            "Choices": [
+                {
+                    "Text": "Take the key from the man and return to the entrance of the house.",
+                    "Target": "Entrance",
+                    "Pickup": "key",
+                    "Need": "knife"
+                }
+            ]
+        },
+
+        "Main": {
+            "Body": "Inside the main room you see a tall cloaked man with bloody fangs protruding from his mouth.",
+            "Choices": [
+                {
+                    "Text": "Throw garlic at the figure.",
+                    "Target": "Cleared"
+                }
+            ]
+        },
+        "Cleared": {
+            "Body": "The tall figure screams and shrivels up into dust leaving only his cloak behind. You hear a faint groan from the closet behind him.",
+            "Choices": [
+                {
+                    "Text": "Try to enter the closet.",
+                    "Target": "Beyond",
+                    "Need": "key"
+                }
+            ]
+        },
+        "Death": {
+            "Body": "You died. Maybe next time you will be able to save you girlfriend :(",
+            "Choices": [
+                {
+                    "Text": "Try again",
+                    "Target": "Try again"
+                }
+            ]
+        },
+        "Sucked": {
+            "Body": "The vampire killed you and sucked all your blood.",
+            "Choices": [
+                {
+                    "Text": "Try again",
+                    "Target": "Try again"
+                }
+            ]
+        },
+        "Locked": {
+            "Body": "When you try to open the locked closet you hear a faint clicking sound as a contraption opens the floor beneath you causing you to fall to your death leaving your girlfriend to starve to death.",
+            "Choices": [
+                {
+                    "Text": "Try again",
+                    "Target": "Try again"
+                }
+            ]
+        },
+        "Beyond": {
+            "Body": "You use the key from the man in the dungeon to carefully open the closet. In the closet you find you wife. She is hungry and bruised but still alright. You pick her up and take her to your car where you can bring her to the hospital."
+        }
+    }
+}
